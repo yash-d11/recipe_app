@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Card = (props) => {
     const { id, title, image, description, instructions, ingredients } =
         props.recipe;
-
+        
     return (
         <Link
             to={`/recipes/${id}`}
@@ -11,7 +11,7 @@ const Card = (props) => {
         >
             <img className="w-[80%]" src={image} alt={title} />
             <h1 className="mt-5 mb-3 text-xl text-semibold">{title}</h1>
-            <p>{description.slice(0, 100)}...</p>
+            <p >{description.slice(0, 10)}...</p>
             <div className="flex justify-between text-zinc-400 mt-5 ">
                 <p className="text-center ">
                     <i className="ri-timer-line"></i>

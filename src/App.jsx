@@ -1,6 +1,5 @@
 import React from "react";
 import Nav from "./components/Nav";
-
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
 import Recipes from "./components/Recipes";
@@ -12,7 +11,7 @@ import Update from "./components/Update";
 
 const App = () => {
     return (
-        <div className="w-[80%] m-auto ">
+        <div className="w-full sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] m-auto p-4">
             <Nav />
 
             <Routes>

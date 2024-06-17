@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import Card from "./Card";
 import { Link, useLocation } from "react-router-dom";
 import { Recipecontext } from "../contexts/RecipeContext";
+
 const Recipes = () => {
     const [recipes, setrecipes] = useContext(Recipecontext);
     const { pathname } = useLocation();
@@ -11,13 +12,13 @@ const Recipes = () => {
     }, []);
 
     return (
-        <div className=" ">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-center text-2xl font-semibold">OUR RECIPES</h1>
             <p className="text-center text-zinc-400">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
                 aperiam?
             </p>
-            <div className="recipe-cards mt-[5%]  flex flex-wrap p-5">
+            <div className="recipe-cards mt-5 flex flex-wrap">
                 {recipes.length > 0 ? (
                     recipes.map((r) => <Card key={r.id} recipe={r} />)
                 ) : (
@@ -29,10 +30,10 @@ const Recipes = () => {
             {pathname === "/recipes" && (
                 <Link
                     to="/create-recipe"
-                    className="cursor-pointer rounded-md absolute top-[15%] py-2 px-5 left-[10%]  bg-green-200 gap-x-3 flex items-center"
+                    className="block w-40 py-2 px-5 mt-5 mx-auto text-center rounded-md bg-green-200 text-green-600 hover:bg-green-300 duration-200"
                 >
                     <i className="text-3xl text-green-600 ri-add-box-line"></i>
-                    Create Recipe
+                    <span className="ml-2">Create Recipe</span>
                 </Link>
             )}
         </div>

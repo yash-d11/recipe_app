@@ -1,16 +1,18 @@
+import React from "react";
 import Footer from "./Footer";
 import Home from "./Home";
-import Nav from "./Nav";
 import Recipes from "./Recipes";
 
 const Layout = () => {
     return (
-        <>
-           
-            <Home />
-            <Recipes />
+        <div className="min-h-screen flex flex-col">
+            <div className="flex-grow">
+                <Home />
+                <div className="mt-10"></div>
+                <Recipes />
+            </div>
             <Footer />
-        </>
+        </div>
     );
 };
 
