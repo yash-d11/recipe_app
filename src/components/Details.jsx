@@ -23,12 +23,12 @@ const Details = () => {
         <div className="w-full sm:w-[90%] md:w-[80%] lg:w-[70%] m-auto p-5">
             <Link to="/recipes" className="text-3xl ri-arrow-left-line"></Link>
             <div className="details w-full flex flex-col sm:flex-row h-[75vh] mt-3">
-                <div className="dets w-full sm:w-1/2 p-3 sm:p-[3%] shadow">
+                <div className="dets w-full sm:w-1/2 p-3 sm:p-[3%] shadow ">
                     <img className="w-full" src={recipe.image} alt="" />
-                    <h1 className="text-xl mb-5 mt-5 sm:mt-[10%] text-center">
+                    <h1 className="text-xl mb-5 mt-5 sm:mt-[10%] text-center break-words w-full">
                         {recipe.title}
                     </h1>
-                    <p className="text-zinc-400">{recipe.description}</p>
+                    <p className="text-zinc-400 break-words w-full">{recipe.description}</p>
                     <div className="flex justify-between py-5 px-3 sm:py-10 sm:px-5">
                         <Link
                             to={`/update-recipe/${params.id}`}

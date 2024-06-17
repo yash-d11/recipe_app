@@ -9,8 +9,12 @@ const Card = (props) => {
             className="flex flex-col text-center w-full sm:w-[48%] md:w-[30%] mb-4 p-4 shadow-lg hover:scale-105 transition-transform duration-200"
         >
             <img className="w-full h-48 object-cover rounded-md mb-4" src={image} alt={title} />
-            <h1 className="text-xl font-semibold mb-2">{title}</h1>
-            <p className="text-sm text-zinc-600 mb-4">{description.slice(0, 100)}...</p>
+            <h1 className="text-xl font-semibold mb-2 truncate" style={{ display: "-webkit-box", WebkitLineClamp: 1, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
+                {title}
+            </h1>
+            <p className="text-sm text-zinc-600 mb-4 truncate" style={{ display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
+                {description}
+            </p>
             <div className="flex justify-between text-zinc-400 mt-auto">
                 <div className="text-center flex-1">
                     <i className="ri-timer-line"></i>
@@ -33,4 +37,3 @@ const Card = (props) => {
 };
 
 export default Card;
-
