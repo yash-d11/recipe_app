@@ -13,7 +13,7 @@ const Recipes = () => {
     }, []);
 
     return (
-        <div className="container mt-4 mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mt-4 min-h-screen mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-center text-2xl font-semibold">OUR RECIPES</h1>
             <p className="text-center text-zinc-400">
             Discover delightful recipes to inspire your culinary adventures!
