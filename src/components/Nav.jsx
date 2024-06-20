@@ -23,7 +23,7 @@ const Nav = () => {
       />
       <div className="hidden sm:flex gap-x-10 text-md items-center">
         <NavLink
-          exact
+          
           to="/"
           className={({ isActive }) =>
             isActive
@@ -75,7 +75,7 @@ const Nav = () => {
         variants={variants}
       >
         <NavLink
-          exact
+          
           to="/"
           className={({ isActive }) =>
             isActive
