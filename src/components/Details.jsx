@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { Recipecontext } from "../contexts/RecipeContext";
 import { toast } from "react-toastify";
+import {motion} from "framer-motion"
 
 const Details = () => {
     const navigate = useNavigate();
@@ -22,7 +23,7 @@ const Details = () => {
     return recipe ? (
         <div className="w-full sm:w-[90%] md:w-[80%] lg:w-[70%] m-auto p-5">
             <Link to="/recipes" className="text-3xl ri-arrow-left-line"></Link>
-            <div className="details w-full flex flex-col sm:flex-row h-[75vh] mt-3">
+            <div className="details w-full flex flex-col sm:flex-row h-[75%] mt-3">
                 <div className="dets w-full sm:w-1/2 p-3 sm:p-[3%] shadow ">
                     <img className="w-full" src={recipe.image} alt="" />
                     <h1 className="text-xl mb-5 mt-5 sm:mt-[10%] text-center break-words w-full">
@@ -30,18 +31,19 @@ const Details = () => {
                     </h1>
                     <p className="text-zinc-400 break-words w-full">{recipe.description}</p>
                     <div className="flex justify-between py-5 px-3 sm:py-10 sm:px-5">
-                        <Link
+                        <motion.button whileTap={{ scale: 0.85 }} className="text-blue-400 border-blue-400 border py-2 px-5"><Link
                             to={`/update-recipe/${params.id}`}
-                            className="text-blue-400 border-blue-400 border py-2 px-5"
+                            
                         >
                             Update
                         </Link>
-                        <button
+                        </motion.button>
+                        <motion.button whileTap={{ scale: 0.85 }}
                             onClick={DeleteHandler}
                             className="text-red-400 border-red-400 border py-2 px-5"
                         >
                             Delete
-                        </button>
+                        </motion.button>
                     </div>
                 </div>
                 <div className="desc w-full sm:w-1/2 px-3 sm:px-[5%] py-3 sm:py-[3%] overflow-auto">

@@ -8,10 +8,12 @@ import Create from "./components/Create";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Update from "./components/Update";
+import Footr from "./components/Footr";
+
 
 const App = () => {
     return (
-        <div className="w-full sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] m-auto p-4">
+        <><div className="w-full sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] m-auto p-4">
             <Nav />
 
             <Routes>
@@ -24,6 +26,8 @@ const App = () => {
                 <Route path="/contact" element={<Contact />} />
             </Routes>
         </div>
+        <Footr />  
+        </>
     );
 };
 

@@ -5,7 +5,12 @@ export const Recipecontext = createContext(null);
 const RecipeContext = (props) => {
     const [recipes, setrecipes] = useState([]);
     useEffect(() => {
-        setrecipes(JSON.parse(localStorage.getItem("recipes")) || []);
+        setrecipes(JSON.parse(localStorage.getItem("recipes")) || [{
+            id: 1,
+            title: "Spaghetti Carbonara",
+            ingredients: ["Spaghetti", "Eggs", "Pancetta", "Parmesan cheese", "Pepper"],
+            instructions: "Cook spaghetti. In a bowl, mix eggs and Parmesan. Cook pancetta until crispy. Combine all with spaghetti. Add pepper.",
+        }]);
     }, []);
 
     return (

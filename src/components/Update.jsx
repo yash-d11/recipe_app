@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Recipecontext } from "../contexts/RecipeContext";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
+import { motion } from "framer-motion";
 
 const Update = () => {
     const navigate = useNavigate();
@@ -73,9 +74,9 @@ const Update = () => {
                 placeholder="Recipe Instructions (separate with commas)"
             ></textarea>
             <div className="w-full flex justify-center">
-                <button className="rounded-md text-xl bg-green-600 text-white py-2 px-5 hover:bg-green-700 duration-200">
+                <motion.button whileTap={{ scale: 0.85 }} className="rounded-md text-xl bg-green-600 text-white py-2 px-5 hover:bg-green-700 duration-200">
                     Re-Publish Recipe &nbsp; &#8594;
-                </button>
+                </motion.button>
             </div>
         </form>
     ) : (
