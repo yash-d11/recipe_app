@@ -2,11 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Footer from "./Footer";
 import Home from "./Home";
-import Recipes from "./Recipes";
-import ShareRecipeComponent from "./Home2";
-import ExploreRecipes from "./Home3";
 import Testimonials from "./Testimonial";
-import Footr from "./Footr";
 import WhyUs from "./Whyus";
 
 const Layout = () => {
@@ -22,22 +18,7 @@ const Layout = () => {
                     <Home />
                 </motion.div>
                 
-                <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay:1.5 }}
-                >
-                    <ShareRecipeComponent />
-                </motion.div>
-                <motion.div
-                    initial={{ opacity: 0, y: 50  }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1 }}
-                >
-                    <ExploreRecipes />
-                </motion.div>
+                
                 
             </div>
             <motion.div

@@ -66,7 +66,7 @@ const Footer = () => {
         {features.map((feature, index) => (
           <div
             key={index}
-            className="relative w-full sm:w-[45%] lg:w-[30%] h-[250px] mb-5 sm:mb-0 flex items-center justify-center cursor-pointer hover:scale-105 hover:after"
+            className="relative w-full sm:w-[45%] lg:w-[30%] h-[250px] mb-5 sm:mb-0 flex items-center justify-center cursor-pointer mt-5 hover:scale-105 hover:after"
             onClick={() => handleCardClick(index)}
           >
             <motion.div

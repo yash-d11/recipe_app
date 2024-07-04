@@ -7,7 +7,7 @@ const ShareYourRecipe = () => {
         <div className="flex flex-col lg:flex-row items-center justify-center">
             <img
                 className="w-full lg:w-1/2 h-64 lg:h-auto object-cover m-auto mt-20 p-6 rounded-lg shadow-2xl"
-                src="https://scontent.fbho3-1.fna.fbcdn.net/v/t39.30808-6/258510336_4883575098343745_6291664813413268404_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=p8JstKgXTzoQ7kNvgEfc3gH&_nc_ht=scontent.fbho3-1.fna&oh=00_AYDKnBfmTKAuWu786pj3x-Ra0dsDd9cqpIbNqGMv9_b_Cg&oe=667923CC"
+                src="https://st3.depositphotos.com/13324256/17303/i/380/depositphotos_173034766-stock-photo-woman-writing-down-recipe.jpg"
                 alt="Share Your Recipe"
             />
             <div className="w-full lg:w-1/2 mt-10 p-4 lg:p-8">

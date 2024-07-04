@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import ShareRecipeComponent from "./Home2";
+import ExploreRecipes from "./Home3";
 
 const Home = () => {
     const navigate = useNavigate();
@@ -24,6 +26,7 @@ const Home = () => {
     };
 
     return (
+        <>
         <div className="w-full flex flex-col lg:flex-row justify-between items-center mt-20 lg:mt-[15vh] h-auto lg:h-[60vh] px-5">
             <motion.div
                 className="left w-full lg:w-full mb-10 lg:mb-0 text-center lg:text-left"
@@ -70,6 +73,24 @@ const Home = () => {
                 />
             </motion.div>
         </div>
+        <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1,delay:0.5 }}
+                >
+                    <ShareRecipeComponent />
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, y: 50  }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1 }}
+                >
+                    <ExploreRecipes />
+                </motion.div>
+
+        </>
     );
 };
 
